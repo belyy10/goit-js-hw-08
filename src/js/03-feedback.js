@@ -19,7 +19,7 @@ function onformSubmit (e){
     e.preventDefault() ;
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY)
-    return formData = {}
+    console.log(formData)
 }
 
 function populateTextarea () {
@@ -27,6 +27,7 @@ function populateTextarea () {
     
     if(savedMessage) {
         formData = JSON.parse (savedMessage)
+        console.log(formData)
             if (formData.email) {
                 refs.email.value = formData.email
             }
